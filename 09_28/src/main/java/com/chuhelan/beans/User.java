@@ -15,4 +15,5 @@ public class User {
     String user_name;
     String user_gender;
     String user_phone;
+    String user_profile;
 }

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+</head>
+<body>
+<img th:src="${profile}" style="height: 120px;width: 120px;border-radius: 120px"><br>
+姓名：<span th:text="${name}"/><br>
+性别：<span th:text="${gender}"/><br>
+邮件：<span th:text="${email}"/><br>
+电话：<span th:text="${phone}"/><br>
+</body>
+</html>
