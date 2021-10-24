@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>首页 | Fastbuy 正品消费解决方案</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .left {
+        position: relative;
+        background: #F6F8FD;
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+
+    .right {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        float: right;
+        background: #FFFFFF;
+    }
+
+    .submitBtn {
+        background: #0066FF;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+        color: #FFFFFF;
+        width: 380px;
+        height: 50px;
+        font-size: larger;
+    }
+
+    .inputBtn {
+        border: 1px solid #BAC3D4;
+        border-radius: 5px;
+        width: 380px;
+        height: 40px;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+
+    input::-ms-input-placeholder {
+        text-align: center;
+    }
+
+    input::-webkit-input-placeholder {
+        text-align: center;
+    }
+
+    .leftPic {
+        text-align: center;
+        margin: 150px;
+    }
+
+    .niceWord {
+        padding: 30px;
+    }
+</style>
+
+<body>
+<!--左侧布局-->
+<div class="left">
+    <div style="padding: 30px;">
+        <div>
+            <img src="https://gitee.com/im-not-winnie/pic-bed/raw/master/img/fastbuy.png" style="width: 100px"/>
+        </div>
+        <div class="leftPic">
+            <img src="https://gitee.com/im-not-winnie/pic-bed/raw/master/img/shop_index.svg" style="width: 300px"/>
+        </div>
+        <!--宣传语-->
+        <div class="niceWord">
+            <div style="color: #012563; font-weight: bolder;
+            text-align: center;
+            font-family: 'Microsoft YaHei'; font-size: x-large;">
+                买来买去速买网，购来购去购时尚
+            </div>
+            <div style="color: #5E749D; font-family: 'Microsoft YaHei';
+             text-align: center; margin-top: 20px;font-size: large;">
+                速买网是一个可让全球民众在网上买卖物品的线上拍卖及购物网站。人们可以在Fastbuy上通过网络出售商品。
+                速买网，正品消费解决方案。
+            </div>
+        </div>
+    </div>
+</div>
+<!--右侧布局-->
+<div class="right">
+    <div style="padding: 30px">
+        <div style="text-align: right">
+            <a>还没有账号？</a>
+            <a href="register.html" style="color: #0469FF">立即注册！</a>
+        </div>
+        <div style="text-align: center; font-family: 'Microsoft YaHei'; font-size: xx-large; margin-top: 30%">
+            登录Fastbuy
+        </div>
+        <!--登录框架-->
+        <div style="display: flex; align-items: center; justify-content: center; margin-top: 50px">
+            <form action="/login">
+                <div>电子邮件</div>
+                <input name="user_email" placeholder="邮箱" class="inputBtn"><br>
+                <div>密码</div>
+                <input name="user_password" type="password" placeholder="密码" class="inputBtn"><br>
+                <input type="submit" value="登&nbsp;&nbsp;&nbsp;录" class="submitBtn">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

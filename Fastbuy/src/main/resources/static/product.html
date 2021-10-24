@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商品 | Fastbuy 正品消费解决方案</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    input, button {
+        outline: none;
+        border: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .clearfix::before,
+    .clearfix::after {
+        content: "";
+        height: 0;
+        line-height: 0;
+        display: block;
+        visibility: hidden;
+    }
+
+    .clearfix::after {
+        clear: both;
+    }
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+    .product li {
+        float: left;
+        width: 234px;
+        height: 246px;
+        padding: 34px 0 20px;
+        z-index: 1;
+        margin-left: 14px;
+        margin-bottom: 14px;
+        background: #fff;
+        -webkit-transition: all .2s linear;
+        transition: all .2s linear;
+        position: relative;
+    }
+
+    .pro-img {
+        width: 150px;
+        /*height: 150px;*/
+        margin: 0 auto 18px;
+    }
+
+    .pro-img a {
+        width: 100%;
+        height: 100%;
+    }
+
+    .pro-img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .product li h3 {
+        margin: 0 10px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .product li h3 a {
+        color: #333;
+    }
+
+    .desc {
+        margin: 0 10px 10px;
+        height: 18px;
+        font-size: 12px;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #b0b0b0;
+    }
+
+    .price {
+        font-size: 14px;
+        margin: 0 10px 10px;
+        text-align: center;
+        color: #E10600;
+    }
+
+    .price del {
+        color: #b0b0b0;
+    }
+
+    .review {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        width: 234px;
+        height: 0;
+        overflow: hidden;
+        font-size: 12px;
+        background: #E10600;
+        opacity: 0;
+        -webkit-transition: all .2s linear;
+        transition: all .2s linear;
+    }
+
+    .review a {
+        color: #757575;
+        display: block;
+        padding: 8px 30px;
+        outline: 0;
+    }
+
+    .review a span {
+        display: block;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+
+    .product li:hover {
+        -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        -webkit-transform: translate3d(0, -2px, 0);
+        transform: translate3d(0, -2px, 0);
+    }
+
+    .product li:hover .review {
+        opacity: 1;
+        height: 76px;
+    }
+
+    .topBar {
+        height: 80px;
+        background-color: #E10600;
+        margin-bottom: 50px;
+    }
+
+    .logoPic {
+        height: 60px;
+        width: 60px;
+        margin-left: 87px;
+        margin-bottom: 30px;
+    }
+
+</style>
+<body>
+
+<div class="topBar">
+    <div>
+        <img src="https://gitee.com/im-not-winnie/pic-bed/raw/master/img/fastbuy_white.png"
+             style="height: 60px;margin-left: 30px;margin-top: 10px;">
+        <img th:src="${profile}"
+             style="height: 60px;width: 60px;border-radius: 64px;margin-right: 20px;
+             margin-top: 10px;color: #ffffff;float: right">
+        <div style="float: right;margin-top: 50px;margin-top: 25px;margin-right: 40px;font-size: x-large;color: #ffffff">
+            <span>你好,&nbsp;</span><span th:text="${name}"/>
+        </div>
+        <a href="index.html" style="color: #ffffff; float: right;font-size: x-large;margin-top: 25px;margin-right: 50px">回到首页</a>
+    </div>
+</div>
+
+<div class="product">
+    <ul>
+        <li>
+            <img class="logoPic" src="img/MercedesLogo.png">
+            <div class="pro-img">
+                <a href="#">
+                    <img src="img/Mercedes.png">
+                </a>
+            </div>
+            <h3><a href="#">梅赛德斯 F1方程式赛车</a></h3>
+            <p class="desc">1.6T V6引擎 / 零百加速2.5秒</p>
+            <p class="price">
+                <span>44687299</span>元
+                <del>44687300</del>
+            </p>
+            <div class="review">
+                <a href="#">
+                    <span class="msg">车手：</span>
+                    <span class="msg">路易斯·汉密尔顿 | 英国</span>
+                    <span class="auther">瓦尔特利·博塔斯 | 芬兰</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="product">
+    <ul>
+        <li>
+            <img class="logoPic" src="img/RedBullLogo.png">
+            <div class="pro-img">
+                <a href="#">
+                    <img src="img/RedBull.png">
+                </a>
+            </div>
+            <h3><a href="#">红牛 F1方程式赛车</a></h3>
+            <p class="desc">1.6T V6引擎 / 零百加速2.5秒</p>
+            <p class="price">
+                <span>44687299</span>元
+                <del>44687300</del>
+            </p>
+            <div class="review">
+                <a href="#">
+                    <span class="msg">车手：</span>
+                    <span class="msg">马克斯·维斯塔潘 | 荷兰</span>
+                    <span class="auther">塞尔吉奥·佩雷兹 | 墨西哥</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="product">
+    <ul>
+        <li>
+            <img class="logoPic" src="img/McLarenLogo.png">
+            <div class="pro-img">
+                <a href="#">
+                    <img src="img/McLaren.png">
+                </a>
+            </div>
+            <h3><a href="#">迈凯伦 F1方程式赛车</a></h3>
+            <p class="desc">1.6T V6引擎 / 零百加速2.5秒</p>
+            <p class="price">
+                <span>44687299</span>元
+                <del>44687300</del>
+            </p>
+            <div class="review">
+                <a href="#">
+                    <span class="msg">车手：</span>
+                    <span class="msg">丹尼尔·里卡多 | 澳大利亚</span>
+                    <span class="auther">兰多·诺里斯 | 英国</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="product">
+    <ul>
+        <li>
+            <img class="logoPic" src="img/FerrariLogo.png">
+            <div class="pro-img">
+                <a href="#">
+                    <img src="img/Ferrari.png">
+                </a>
+            </div>
+            <h3><a href="#">法拉利 F1方程式赛车</a></h3>
+            <p class="desc">1.6T V6引擎 / 零百加速2.5秒</p>
+            <p class="price">
+                <span>44687299</span>元
+                <del>44687300</del>
+            </p>
+            <div class="review">
+                <a href="#">
+                    <span class="msg">车手：</span>
+                    <span class="msg">卡洛斯·赛恩斯 | 西班牙</span>
+                    <span class="auther">夏尔·勒克莱尔 | 摩纳哥</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="product">
+    <ul>
+        <li>
+            <img class="logoPic" src="img/AlpineLogo.png">
+            <div class="pro-img">
+                <a href="#">
+                    <img src="img/Alpine.png">
+                </a>
+            </div>
+            <h3><a href="#">Alpine F1方程式赛车</a></h3>
+            <p class="desc">1.6T V6引擎 / 零百加速2.5秒</p>
+            <p class="price">
+                <span>44687299</span>元
+                <del>44687300</del>
+            </p>
+            <div class="review">
+                <a href="#">
+                    <span class="msg">车手：</span>
+                    <span class="msg">费尔南多·阿隆索 | 西班牙</span>
+                    <span class="auther">埃斯特班·奥康 | 法国</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="product">
+    <ul>
+        <li>
+            <img class="logoPic" src="img/AlphaTauriLogo.png">
+            <div class="pro-img">
+                <a href="#">
+                    <img src="img/AlphaTauri.png">
+                </a>
+            </div>
+            <h3><a href="#">红牛二队 F1方程式赛车</a></h3>
+            <p class="desc">1.6T V6引擎 / 零百加速2.5秒</p>
+            <p class="price">
+                <span>44687299</span>元
+                <del>44687300</del>
+            </p>
+            <div class="review">
+                <a href="#">
+                    <span class="msg">车手：</span>
+                    <span class="msg">角田裕毅 | 日本</span>
+                    <span class="auther">皮埃尔·加斯利 | 法国</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="product">
+    <ul>
+        <li>
+            <img class="logoPic" src="img/AlfaRomeoLogo.png">
+            <div class="pro-img">
+                <a href="#">
+                    <img src="img/AlfaRomeo.png">
+                </a>
+            </div>
+            <h3><a href="#">阿尔法·罗密欧 F1方程式赛车</a></h3>
+            <p class="desc">1.6T V6引擎 / 零百加速2.5秒</p>
+            <p class="price">
+                <span>44687299</span>元
+                <del>44687300</del>
+            </p>
+            <div class="review">
+                <a href="#">
+                    <span class="msg">车手：</span>
+                    <span class="msg">基米·莱科宁 | 芬兰</span>
+                    <span class="auther">安东尼奥·乔维纳奇 | 意大利</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="product">
+    <ul>
+        <li>
+            <img class="logoPic" src="img/HaasLogo.png">
+            <div class="pro-img">
+                <a href="#">
+                    <img src="img/Haas.png">
+                </a>
+            </div>
+            <h3><a href="#">哈斯 F1方程式赛车</a></h3>
+            <p class="desc">1.6T V6引擎 / 零百加速2.5秒</p>
+            <p class="price">
+                <span>44687299</span>元
+                <del>44687300</del>
+            </p>
+            <div class="review">
+                <a href="#">
+                    <span class="msg">车手：</span>
+                    <span class="msg">米克·舒马赫 | 德国</span>
+                    <span class="auther">尼基塔·马泽平 | 俄罗斯</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="product">
+    <ul>
+        <li>
+            <img class="logoPic" src="img/WilliamsLogo.png">
+            <div class="pro-img">
+                <a href="#">
+                    <img src="img/Williams.png">
+                </a>
+            </div>
+            <h3><a href="#">威廉姆斯 F1方程式赛车</a></h3>
+            <p class="desc">1.6T V6引擎 / 零百加速2.5秒</p>
+            <p class="price">
+                <span>44687299</span>元
+                <del>44687300</del>
+            </p>
+            <div class="review">
+                <a href="#">
+                    <span class="msg">车手：</span>
+                    <span class="msg">乔治·拉塞尔 | 英国</span>
+                    <span class="auther">尼古拉斯·拉特菲 | 加拿大</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="product">
+    <ul>
+        <li>
+            <img class="logoPic" src="img/AstonMartinLogo.png">
+            <div class="pro-img">
+                <a href="#">
+                    <img src="img/AstonMartin.png">
+                </a>
+            </div>
+            <h3><a href="#">阿斯顿马丁 F1方程式赛车</a></h3>
+            <p class="desc">1.6T V6引擎 / 零百加速2.5秒</p>
+            <p class="price">
+                <span>44687299</span>元
+                <del>44687300</del>
+            </p>
+            <div class="review">
+                <a href="#">
+                    <span class="msg">车手：</span>
+                    <span class="msg">塞巴斯蒂安·维特尔 | 德国</span>
+                    <span class="auther">兰斯·斯特罗尔 | 加拿大</span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

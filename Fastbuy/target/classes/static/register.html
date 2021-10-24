@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>注册 | Fastbuy 购物从未如此简单</title>
+</head>
+<style>
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .left {
+        position: relative;
+        width: 52%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+        background: #000;
+        background-size: cover;
+    }
+
+    .right {
+        position: relative;
+        width: 48%;
+        height: 100%;
+        float: right;
+        background: #FFFFFF;
+    }
+
+    .magicWords {
+        position: absolute;
+        bottom: 300px;
+        color: #FFFFFF;
+        font-size: 4rem;
+        font-family: "Microsoft YaHei";
+        margin-left: 10%;
+    }
+
+    .submitBtn {
+        background: #0066FF;
+        border-radius: 10px;
+        cursor: pointer;
+        border: none;
+        color: #FFFFFF;
+        width: 380px;
+        height: 50px;
+        font-size: larger;
+    }
+
+    .inputBtn {
+        border: 1px solid #BAC3D4;
+        border-radius: 5px;
+        width: 380px;
+        height: 35px;
+        margin-bottom: 15px;
+    }
+
+    input::-ms-input-placeholder {
+        text-align: center;
+    }
+
+    input::-webkit-input-placeholder {
+        text-align: center;
+    }
+
+</style>
+<body>
+<div class="left">
+    <img src="https://gitee.com/im-not-winnie/pic-bed/raw/master/img/shop.jpg"
+         style="background-size: cover; width:auto;height:auto;max-width:100%;max-height:100%;opacity: 0.6;filter: alpha(opacity=100);}">
+    <div class="magicWords">
+        <div>购物，</div>
+        <div>从未如此简单！</div>
+    </div>
+</div>
+<div class="right">
+    <div style="padding: 50px">
+        <img src="https://gitee.com/im-not-winnie/pic-bed/raw/master/img/fastbuy.png" style="width: 100px">
+
+        <!--register-->
+        <div>
+            <div style="font-family: 'Microsoft YaHei';font-size: xx-large; color:#173559 "> 开通Fastbuy账户</div>
+            <div style="font-family: 'Microsoft YaHei';font-size: large;color:#7F8794;">
+                运用我们的服务和解决方案，以满足您所有的要求。点在下方注册Fastbuy账户。开始注册！
+            </div>
+        </div>
+        <!--注册-->
+        <div style="display: flex; align-items: center; justify-content: center; margin-top: 50px">
+            <form action="/register">
+                <div>昵称</div>
+                <input name="user_name" placeholder="昵称" class="inputBtn"><br>
+                <div>电子邮件</div>
+                <input name="user_email" placeholder="邮箱" class="inputBtn"><br>
+                <div>头像地址</div>
+                <input name="user_profile" placeholder="头像" class="inputBtn"><br>
+                <div>手机号码</div>
+                <input name="user_phone" type="phone" maxlength="11" minlength="11" placeholder="手机号码" class="inputBtn"><br>
+                <div>密码</div>
+                <input name="user_password" type="password" placeholder="密码" class="inputBtn"><br>
+                <div>确认密码</div>
+                <input name="user_passwordConfirm" type="password" placeholder="密码" class="inputBtn"><br>
+                <input type="submit" value="注&nbsp;&nbsp;&nbsp;册" class="submitBtn" style="margin-top: 30px">
+            </form>
+        </div>
+        <div style="margin-top: 30px;text-align: center">
+            <span>已有账号？</span><a href="index.html">点此登录</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

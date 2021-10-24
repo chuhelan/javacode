@@ -7,13 +7,13 @@ import org.springframework.stereotype.Repository;
 /**
  * @author chuhelan
  * @version 1.0
- * @date 2021/10/5 14:32
+ * @date 2021/10/21 14:14
  */
 
 @Mapper
 @Repository
 public interface UserDao {
-    User selectUser(User u);
+    User select_user_by_email_and_password(User u);
 
-    int registerUser(User u);
+    int register_user(User u);
 }

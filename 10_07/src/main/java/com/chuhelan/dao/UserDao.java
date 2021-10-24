@@ -14,6 +14,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDao {
     User selectUser(User u);
-
     int registerUser(User u);
 }

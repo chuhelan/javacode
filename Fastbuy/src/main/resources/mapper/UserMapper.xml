@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chuhelan.dao.UserDao">
+    <select id="select_user_by_email_and_password" resultType="com.chuhelan.beans.User">
+        select *
+        from fast_user
+        where user_email = #{user_email}
+          and user_password = #{user_password}
+    </select>
+
+    <insert id="register_user">
+        insert into fast_user (user_name, user_email, user_phone, user_password, user_profile)
+        values (#{user_name}, #{user_email}, #{user_phone}, #{user_password}, "https://gitee.com/im-not-winnie/pic-bed/raw/master/img/moren.jpg")
+    </insert>
+</mapper> 
