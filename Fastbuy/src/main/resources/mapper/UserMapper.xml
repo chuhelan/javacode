@@ -12,6 +12,6 @@
 
     <insert id="register_user">
         insert into fast_user (user_name, user_email, user_phone, user_password, user_profile)
-        values (#{user_name}, #{user_email}, #{user_phone}, #{user_password}, "https://gitee.com/im-not-winnie/pic-bed/raw/master/img/moren.jpg")
+        values (#{user_name}, #{user_email}, #{user_phone}, #{user_password}, #{user_profile})
     </insert>
 </mapper> 
